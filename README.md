@@ -1,4 +1,4 @@
-# nordea_cording_assignement
+# nordea cording assignement
 I was able to complete all the five questions.
 
 1st Question = 1_fiftyRandoms.py
