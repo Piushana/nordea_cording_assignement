@@ -15,10 +15,10 @@ parameters = {
 response = requests.get("http://www.7timer.info/bin/api.pl", params=parameters)
 
 dataSeries = response.json()['dataseries']
-weather_data = open('weather_data.csv', 'w')
+weatherData = open('weatherData.csv', 'w')
 
 # create the csv writer object
-csv_writer = csv.writer(weather_data)
+csvWriter = csv.writer(weatherData)
 
 # Counter variable used for writing
 count = 0
@@ -27,10 +27,10 @@ for data in dataSeries:
     if count == 0:
         # Writing headers of CSV file
         header = data.keys()
-        csv_writer.writerow(header)
+        csvWriter.writerow(header)
         count += 1
 
     # Writing data of CSV file
-    csv_writer.writerow(data.values())
+    csvWriter.writerow(data.values())
 
-weather_data.close()
+weatherData.close()
